@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme{
+    --color-primary: #2E7D32;
+  --color-accent: #FBC02D;
+  --font-Poppins:"Poppins", sans-serif
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}
