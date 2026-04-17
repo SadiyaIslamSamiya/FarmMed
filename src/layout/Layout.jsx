@@ -26,7 +26,7 @@ const Layout = () => {
             <h1 className=' font-bold text-[24px] text-primary'>FarmMed</h1>
           </div>
           <nav className=' py-6 px-4'>
-            <ul className=''>
+            <ul className='flex flex-col gap-5'>
 
               <li><NavLink to='/' className={({ isActive }) =>
                 `flex items-center px-4 py-3 rounded-lg transition-colors ${
@@ -50,7 +50,7 @@ const Layout = () => {
                  <span className='font-Poppins text-xl font-semibold' >Medicine Library</span>
               </NavLink>
               </li>
-              {/* ------------page-3 Medicine------------ */}
+              {/* ------------page-3 Sales------------ */}
               <li><NavLink to='sales' className={({ isActive }) =>
                 `flex items-center px-4 py-3 rounded-lg transition-colors ${
                   isActive
@@ -62,7 +62,7 @@ const Layout = () => {
                 <span className='font-Poppins text-xl font-semibold' >Sales</span> 
                 </NavLink>
               </li>
-              {/* ------------page-4 Medicine------------ */}
+              {/* ------------page-4 Suppliers------------ */}
               <li><NavLink to='/suppliers' className={({ isActive }) =>
                 `flex items-center px-4 py-3 rounded-lg transition-colors ${
                   isActive

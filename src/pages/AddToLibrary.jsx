@@ -36,10 +36,10 @@ const AddToLibrary = () => {
         </div>
 
         {/* -------------------Form Fields------------------- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-3 gap-6">
 
           {/* Medicine Name */}
-          <div className="space-y-2">
+          <div className="space-y-2 flex flex-col">
             <label className="text-sm font-medium text-gray-600">
               Medicine Name
             </label>
@@ -50,20 +50,9 @@ const AddToLibrary = () => {
             />
           </div>
 
-          {/* Supplier */}
-          <div className="space-y-2">
-            <label className="text-sm font-medium text-gray-600">
-              Supplier
-            </label>
-            <input
-              type="text"
-              placeholder="Enter supplier name"
-              className="w-full px-4 py-2 border border-gray-200 rounded-lg outline-none focus:ring-2 focus:ring-primary"
-            />
-          </div>
 
           {/* Stock */}
-          <div className="space-y-2">
+          <div className="space-y-2 flex flex-col">
             <label className="text-sm font-medium text-gray-600">
               Stock Quantity
             </label>
@@ -75,13 +64,38 @@ const AddToLibrary = () => {
           </div>
 
           {/* Price */}
-          <div className="space-y-2">
-            <label className="text-sm font-medium text-gray-600">
+          <div className="space-y-2  flex flex-col">
+            <label className="text-sm font-medium text-gray-600 ">
               Price ($)
             </label>
             <input
               type="number"
               placeholder="Enter price"
+              className="w-full px-4 py-2 border border-gray-200 rounded-lg outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
+
+          {/* Supplier */}
+          <div className="space-y-2 flex flex-col">
+            <label className="text-sm font-medium text-gray-600">
+              Supplier
+            </label>
+            <input
+              type="text"
+              placeholder="Enter supplier name"
+              required
+              className="w-full px-4 py-2 border border-gray-200 rounded-lg outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
+
+          {/* Supplier Number*/}
+          <div className="space-y-2 flex flex-col">
+            <label className="text-sm font-medium text-gray-600">
+              Supplier Mobile Number
+            </label>
+            <input
+              type="number"
+              placeholder="Enter Mobile Number"
               className="w-full px-4 py-2 border border-gray-200 rounded-lg outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
@@ -92,7 +106,6 @@ const AddToLibrary = () => {
         <div className="flex justify-end gap-3 pt-4">
 
           <button
-            onClick={() => navigate(-1)}
             className="px-5 py-2 rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-100 transition"
           >
             Cancel

@@ -3,19 +3,18 @@ import { FaRegCalendarAlt } from 'react-icons/fa'
 import { FiAlertTriangle } from 'react-icons/fi'
 import { IoMdCalendar } from 'react-icons/io'
 import { PiPillDuotone } from 'react-icons/pi'
-
+import CommonHead from '../components/CommonHead'
 const Dashboard = () => {
   return (
     <>
       <div className="space-y-8 animate-in fade-in duration-500">
       
         {/* ----------------Header---------------- */}
-        <div>
-          <h1 className="text-3xl font-bold text-gray-800">Dashboard</h1>
-          <p className="text-gray-500 mt-1">
-            Overview of your pharmacy performance
-          </p>
-        </div>
+        
+        <CommonHead 
+          page_name={'Dashboard'}
+          sub_titel={'Overview of your pharmacy performance'}
+        />
 
         {/* ----------------Stats Cards---------------- */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

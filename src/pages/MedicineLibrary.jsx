@@ -5,6 +5,7 @@ import { IoSearchOutline } from 'react-icons/io5';
 import { LuFilter } from 'react-icons/lu';
 import { PiPill } from 'react-icons/pi';
 import { Link } from 'react-router';
+import CommonHead from '../components/CommonHead';
 
 const MedicineLibrary = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -14,17 +15,17 @@ const MedicineLibrary = () => {
     <div className="space-y-6 animate-in fade-in duration-500">
 
       {/* --------------------Header-------------------- */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-        <div>
-          <h1 className="text-3xl font-bold text-gray-800">
-            Medicine Library
-          </h1>
-          <p className="text-gray-500 mt-1">
-            Manage and view all medicines in stock
-          </p>
-        </div>
+      <div className='flex justify-between items-center'>
+        <CommonHead 
+          page_name={'Medicine Library'}
+          sub_titel={'Manage and view all medicines in stock'}
+        />
+        
+        <Link to='/addtoLibrary' className=" inline-flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-xl font-semibold shadow-sm hover:bg-primary/90 transition active:scale-95">
+        <FiPlus className="w-5 h-5" />
+        Add Medicine </Link>
       </div>
-
+      
       {/* --------------------Filters & Search-------------------- */}
       <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 flex flex-col sm:flex-row gap-4 items-center">
 
@@ -56,9 +57,7 @@ const MedicineLibrary = () => {
 
       </div>
 
-      {/* --------------Cards (UI only placeholder)-------------- */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-
         {/* --------------Card-------------- */}
         <div className="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1 cursor-pointer">
           
@@ -96,6 +95,119 @@ const MedicineLibrary = () => {
           </div>
 
         </div>
+        {/* --------------Card 2-------------- */}
+        <div className="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1 cursor-pointer">
+          
+          <div className="h-32 bg-gray-50 flex items-center justify-center border-b border-gray-200">
+            <CiImageOn className="w-12 h-12 opacity-50" />
+          </div>
+
+          <div className="p-5 space-y-3">
+            <h3 className="text-lg font-bold text-gray-800 truncate">
+              Medicine Name
+            </h3>
+            <p className="text-sm text-gray-500">
+              Supplier Name
+            </p>
+
+            <div className="flex items-end justify-between">
+              <div>
+                <span className="text-xs text-gray-400 uppercase block mb-1">
+                  Stock
+                </span>
+                <span className="text-lg font-bold text-green-600">
+                  120 units
+                </span>
+              </div>
+
+              <div className="text-right">
+                <span className="text-xs text-gray-400 uppercase block mb-1">
+                  Price
+                </span>
+                <span className="text-lg font-bold text-gray-800">
+                  $00.00
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* --------------Card 3-------------- */}
+        <div className="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1 cursor-pointer">
+          
+          <div className="h-32 bg-gray-50 flex items-center justify-center border-b border-gray-200">
+            <CiImageOn className="w-12 h-12 opacity-50" />
+          </div>
+
+          <div className="p-5 space-y-3">
+            <h3 className="text-lg font-bold text-gray-800 truncate">
+              Medicine Name
+            </h3>
+            <p className="text-sm text-gray-500">
+              Supplier Name
+            </p>
+
+            <div className="flex items-end justify-between">
+              <div>
+                <span className="text-xs text-gray-400 uppercase block mb-1">
+                  Stock
+                </span>
+                <span className="text-lg font-bold text-red-500">
+                  10 units
+                </span>
+              </div>
+
+              <div className="text-right">
+                <span className="text-xs text-gray-400 uppercase block mb-1">
+                  Price
+                </span>
+                <span className="text-lg font-bold text-gray-800">
+                  $00.00
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        {/* --------------Card 4-------------- */}
+        <div className="bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg transition transform hover:-translate-y-1 cursor-pointer">
+          
+          <div className="h-32 bg-gray-50 flex items-center justify-center border-b border-gray-200">
+            <CiImageOn className="w-12 h-12 opacity-50" />
+          </div>
+
+          <div className="p-5 space-y-3">
+            <h3 className="text-lg font-bold text-gray-800 truncate">
+              Medicine Name
+            </h3>
+            <p className="text-sm text-gray-500">
+              Supplier Name
+            </p>
+
+            <div className="flex items-end justify-between">
+              <div>
+                <span className="text-xs text-gray-400 uppercase block mb-1">
+                  Stock
+                </span>
+                <span className="text-lg font-bold text-red-500">
+                  15 units
+                </span>
+              </div>
+
+              <div className="text-right">
+                <span className="text-xs text-gray-400 uppercase block mb-1">
+                  Price
+                </span>
+                <span className="text-lg font-bold text-gray-800">
+                  $00.00
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
 
       {/* ----------Empty State UI---------- */}
@@ -105,9 +217,6 @@ const MedicineLibrary = () => {
         <p>Try adjusting your search or filters.</p>
       </div>
 
-      <Link to='/addtoLibrary' className=" inline-flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-xl font-semibold shadow-sm hover:bg-primary/90 transition active:scale-95">
-      <FiPlus className="w-5 h-5" />
-      Add Medicine </Link>
           
     </div>
   );
